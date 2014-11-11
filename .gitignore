@@ -1,0 +1,8 @@
+node_modules/
+
+assets/bower/
+assets/bundle.js
+assets/style.css
+
+*.swp
+.DS_Store
