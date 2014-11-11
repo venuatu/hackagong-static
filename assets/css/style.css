@@ -47,7 +47,6 @@ p {
 	position: relative;
 	overflow: hidden;
     color: #fff;
-    padding-bottom: 40px;
 }
 
 .section h2 {
@@ -488,7 +487,8 @@ a.outline-btn:hover {
 #schedule {
     background: url('../img/sleep.jpg');
     background-size: cover;
-    background-position: center center;   
+    background-position: center center;
+    padding-bottom: 40px;
 }
 
 #schedule .days {
@@ -551,6 +551,10 @@ a.outline-btn:hover {
     background-position: center center;
 }
 
+#tickets .inner {
+    padding-bottom: 0;
+}
+
 #tickets h2 {
     margin-bottom: 15px;
 }
@@ -585,7 +589,6 @@ h2.entry-price span {
     font-size: 100px;
     line-height: 110px;
 }
-
 
 /* footer */
 
