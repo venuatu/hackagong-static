@@ -38,7 +38,7 @@ $(function() {
                 $("nav li:last-child a").addClass("nav-active");
             }
         }
-    });       
+    });
     
     //prizes slider
     window.mySwipe = new Swipe(document.getElementById('prize-slider'), {
@@ -78,12 +78,22 @@ $(function() {
                 'end': 150
             }
         });
-        
     }
     function onPlayerReady() {
         player.playVideo();
         player.mute();
     }
+    function fixupYoutubeHeight() {
+        var $player = $('#ytplayer');
+        $player.css({
+            height: $player.width() * 9 / 16,
+        });
+        $('#video, #ytplayer').css({
+            minHeight: 0,
+        });
+    }
+    $(window).on('resize', fixupYoutubeHeight);
+    fixupYoutubeHeight();
 });
 
 

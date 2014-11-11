@@ -326,6 +326,10 @@ nav li a:hover {
     background-position: center center;
 }
 
+#about .inner {
+    padding-top: 0;
+}
+
 p.about-text {
     font-size: 26px;
     line-height: 44px;
@@ -637,6 +641,12 @@ and (min-width : 960px) {
 		height: 100%;
 		float: none;
 	}
+
+    #intro .lower {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+    }
 	
 	#content {
 		width: 50%;
