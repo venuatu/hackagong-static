@@ -16,11 +16,6 @@ $(function() {
     }
     var last = 0;
     $(window).scroll(function(){
-        var now = Date.now();
-        if (last < now - 50) {
-            return;
-        }
-        last = now;
         var windowPos = $(window).scrollTop() + 51;
         var windowHeight = $(window).height();
         var docHeight = $(document).height();
@@ -47,19 +42,19 @@ $(function() {
     
     //prizes slider
     window.mySwipe = new Swipe(document.getElementById('prize-slider'), {
-      startSlide: 2,
-      speed: 400,
-      auto: 3000,
-      continuous: true,
-      disableScroll: false,
-      stopPropagation: false,
-      callback: function(index, elem) {},
-      transitionEnd: function(index, elem) {}
+        startSlide: 2,
+        speed: 400,
+        auto: 3000,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false,
+        callback: function(index, elem) {},
+        transitionEnd: function(index, elem) {}
     });
 
     //video
     var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api";
+    tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     var player;
