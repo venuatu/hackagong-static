@@ -43,7 +43,6 @@ p {
 
 .section {
 	width: 100%;
-	min-height: 500px;
 	position: relative;
 	overflow: hidden;
     color: #fff;
