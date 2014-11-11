@@ -14,7 +14,13 @@ $(function() {
         var ahref = $(aChild).attr('href');
         aArray.push(ahref);
     }
+    var last = 0;
     $(window).scroll(function(){
+        var now = Date.now();
+        if (last < now - 50) {
+            return;
+        }
+        last = now;
         var windowPos = $(window).scrollTop() + 51;
         var windowHeight = $(window).height();
         var docHeight = $(document).height();
