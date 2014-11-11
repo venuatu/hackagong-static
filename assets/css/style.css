@@ -41,6 +41,10 @@ p {
     color: #fff;
 }
 
+nav {
+    display: none;
+}
+
 .section {
 	width: 100%;
 	position: relative;
@@ -74,10 +78,13 @@ p {
 
 #intro {
 	background-color: #fff;
-	min-height: 100%;
     background-image: url('../img/bg.png');
     text-align: center;
     padding-bottom: 0;
+}
+
+#intro .lower {
+    padding-bottom: 15px;
 }
 
 .background {
@@ -617,6 +624,10 @@ and (min-width : 960px) {
 	body, html {
 		height: auto !important;
 	}
+
+    nav {
+        display: block;
+    }
 	
 	#wrapper {
 		max-width: 1900px;
@@ -643,7 +654,7 @@ and (min-width : 960px) {
 
     #intro .lower {
         position: absolute;
-        bottom: 15px;
+        bottom: 0;
         width: 100%;
     }
 	
