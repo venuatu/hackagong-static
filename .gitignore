@@ -3,6 +3,7 @@ node_modules/
 assets/bower/
 assets/bundle.js
 assets/style.css
+bower_components/
 
 *.swp
 .DS_Store
