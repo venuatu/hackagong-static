@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 24px;
 	font-weight: 800;
 }
@@ -403,15 +403,25 @@ a.outline-btn:hover {
 
 .prize h3 {
     padding: 20px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 .prize-inner {
     padding: 15px;   
 }
 
-.prize p {
+p.prize-items {
+    font-size: 30px;
+    margin: 0;
+    line-height: 38px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
     color: #444;
+}
+
+.prize p.prize-details {
+    color: #444;
+    font-size: 16px;
 }
 
 .prize-sponsor {
