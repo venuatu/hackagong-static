@@ -3,7 +3,7 @@
 <head>
   <title>HACKAGONG | Make Something Awesome | Wollongong Hackathon | Nov 29-30</title>
   <meta name="viewport" content="initial-scale=1,user-scalable=no">
-  <meta name="description" content="Make something awesome in 30 hours. Form a small team of makers, designers, programmers, engineers, entrepreneurs or anybody with an idea or problem to solve, and build a technology driven product or service prototype in 30 hours.">
+  <meta name="description" content="Make something awesome in 30 hours. Win over $100,000 in prizes. Form a small team of makers, designers, programmers, engineers, entrepreneurs or anybody with an idea or problem to solve, and build a technology driven product or service prototype in 30 hours.">
   
   <meta property="og:image" content="images/rooms-og-image.png">
   <meta property="og:title" content="Hackagong - Make Something Awesome in 30 Hours"/>
@@ -28,23 +28,19 @@
 
 <div id="wrapper">
   <section id="intro" class="section">
-    <div class="upper">
-        <img class="logo" src="assets/img/hackagong.png">
-        <img class="sponsors-gold" src="assets/img/sponsors/sponsors-gold.png">      
-        <p class="intro-text">Make something awesome in 30 hours.<br />Win over $110,000 in prizes.</p>
-    </div>
-    <div class="lower">
-        <a class="tickets-btn" href="#tickets">Buy Tickets</a>
-        <div class="social">
-            <a href="https://www.facebook.com/hackagong" target="_blank"><img src="assets/img/icon-facebook.png"></a>
-            <a href="https://www.facebook.com/groups/hackagongers" target="_blank"><img src="assets/img/icon-fb-group.png"></a>
-            <a href="https://www.twitter.com/hackagong" target="_blank"><img src="assets/img/icon-twitter.png"></a>
-            <a href="https://www.youtube.com/hackagong" target="_blank"><img src="assets/img/icon-youtube.png"></a>
-            <a href="https://www.instagram.com/hackagong" target="_blank"><img src="assets/img/icon-instagram.png"></a>
-            <a href="https://plus.google.com/+hackagong" target="_blank"><img src="assets/img/icon-google.png"></a>
-            <a href="https://www.github.com/hackagong" target="_blank"><img src="assets/img/icon-github.png"></a>
-        </div>
-    </div>
+      <img class="logo" src="assets/img/hackagong.png">
+      <img class="sponsors-gold" src="assets/img/sponsors/sponsors-gold.png">      
+      <p class="intro-text">Make something awesome in 30 hours.<br />Win over $100,000 in prizes.</p>
+      <a class="tickets-btn" href="#tickets">Buy Tickets</a>
+      <div class="social">
+          <a href="https://www.facebook.com/hackagong" target="_blank"><img src="assets/img/icon-facebook.png"></a>
+          <a href="https://www.facebook.com/groups/hackagongers" target="_blank"><img src="assets/img/icon-fb-group.png"></a>
+          <a href="https://www.twitter.com/hackagong" target="_blank"><img src="assets/img/icon-twitter.png"></a>
+          <a href="https://www.youtube.com/hackagong" target="_blank"><img src="assets/img/icon-youtube.png"></a>
+          <a href="https://www.instagram.com/hackagong" target="_blank"><img src="assets/img/icon-instagram.png"></a>
+          <a href="https://plus.google.com/+hackagong" target="_blank"><img src="assets/img/icon-google.png"></a>
+          <a href="https://www.github.com/hackagong" target="_blank"><img src="assets/img/icon-github.png"></a>
+      </div>
   </section>
   
   <div id="content">
@@ -63,9 +59,8 @@
     </nav>
     
     <section id="video" class="section">
-        <!-- *****autoplay, muted, and loop this (https://www.youtube.com/watch?v=g3RUMSr5hUI) and this (https://www.youtube.com/watch?v=bBjTM8UEYBE - but skip old branding at start and old sponsors at end i.e. seconds 18-150 only) -->
-        <iframe id="ytplayer" src="https://www.youtube.com/embed/bBjTM8UEYBE?rel=0&enablejsapi=1&autoplay=1&controls=0&showinfo=0&loop=1&iv_load_policy=3&modestbranding=0&start=18&end=150" frameborder="0" allowfullscreen=""></iframe>
-    </section>
+        <div id="ythack"></div>
+    </section>   
     
     <section id="about" class="section">
         <div class="overlay green-overlay"></div>
@@ -82,45 +77,44 @@
         <div class="overlay purple-overlay"></div>
         <div class="inner">        
             <h2>Massive Prizes</h2>
-            <p>*side-scrolling, pause on hover (https://github.com/thebird/Swipe/pull/335), and some pretty design. See hackagong.com/prizes</p>
-            <div id="prize-slider" class="swipe">
-                <div class="prize">
-                    <h2>Overall Winner Hackagong 2014</h2>
+            <div id="prize-slider">
+                <div id="prize-overall" class="prize">
+                    <h2 class="yellow-overlay"><i class="fa fa-trophy"></i> Overall Winner Hackagong 2014</h2>
                     <h3>Most viable business</h3>
                     <p></p>
                 </div>
-                <div class="prize">
-                    <h2>Most Innovative 3D Print</h2>
+                <div id="prize-3di" class="prize">
+                    <h2 class="orange-overlay">Most Innovative 3D Print</h2>
                     <p></p>
                 </div>
-                <div class="prize">
-                    <h2>Most Creative 3D Print</h2>
+                <div id="prize-braintree" class="prize">
+                    <h2 class="purple-overlay">Best Braintree/PayPal Integration</h2>
                     <p></p>
                 </div>
-                <div class="prize">
-                    <h2>Best Braintree/PayPal Integration</h2>
+                <div id="prize-3dc" class="prize">
+                    <h2 class="orange-overlay">Most Creative 3D Print</h2>
                     <p></p>
                 </div>
-                <div class="prize">
-                    <h2>Best Data Visualisation</h2>
+                <div id="prize-data" class="prize">
+                    <h2 class="green-overlay">Best Data Visualisation</h2>
                     <p>Spark.io</p>
                 </div>
-                <div class="prize">
-                    <h2>Best Use Of Scala/Play/Akka</h2>
+                <div id="prize-scala" class="prize">
+                    <h2 class="purple-overlay">Best Use Of Scala/Play/Akka</h2>
                     <p></p>
-                </div>            
-                <div class="prize">
-                    <h2>Best Indie Game</h2>
+                </div>  
+                <div id="prize-app" class="prize">
+                    <h2 class="pink-overlay">Best Mobile App (students only)</h2>
+                    <p></p>
+                </div>                            
+                <div id="prize-game" class="prize">
+                    <h2 class="blue-overlay">Best Indie Game</h2>
                     <p></p>
                 </div>       
-                <div class="prize">
-                    <h2>Best Internet of Things Device Hack</h2>
+                <div id="prize-iot" class="prize">
+                    <h2 class="orange-overlay">Best Internet of Things Device Hack</h2>
                     <p></p>
-                </div>                   
-                <div class="prize">
-                    <h2>Best Mobile App (students only)</h2>
-                    <p></p>
-                </div>   
+                </div>                    
             </div>                                
         </div>
     </section>
@@ -129,21 +123,41 @@
         <div class="overlay orange-overlay"></div>
         <div class="inner">              
             <h2>Awesome Sponsors</h2>
-             <p>***Need to be nicely spaced. Gold logos (2x2 grid) are slightly bigger than silver (3x3 grid) are bigger than bronze (4x4 grid)</p>
             <div class="sponsor-logos-gold sponsor-logos">
-                <a href="http://www.scriptrock.com/" target="_blank"><img src="assets/img/sponsors/gold/scriptrock.png"></a>
-                <a href="https://www.braintreepayments.com/" target="_blank"><img src="assets/img/sponsors/gold/braintree.png"></a>
-                <a href="http://www.rackspace.com/" target="_blank"><img src="assets/img/sponsors/gold/rackspace.png"></a>
-                <a href="http://eis.uow.edu.au/index.html" target="_blank"><img src="assets/img/sponsors/gold/eis.png"></a>
+                <div class="sponsor-row">
+                    <a href="http://www.scriptrock.com/" target="_blank"><img src="assets/img/sponsors/gold/scriptrock.png"></a>
+                    <a href="https://www.braintreepayments.com/" target="_blank"><img src="assets/img/sponsors/gold/braintree.png"></a>
+                </div>
+                <div class="sponsor-row">
+                    <a href="http://www.rackspace.com/" target="_blank"><img src="assets/img/sponsors/gold/rackspace.png"></a>
+                    <a href="http://eis.uow.edu.au/index.html" target="_blank"><img src="assets/img/sponsors/gold/eis.png"></a>
+                </div>
             </div>
             <div class="sponsor-logos-silver sponsor-logos">
-                <a href="http://internetrix.com.au/" target="_blank"><img src="assets/img/sponsors/silver/internetrix.png"></a>
-                <a href="http://typesafe.com/" target="_blank"><img src="assets/img/sponsors/silver/typesafe.png"></a>
-                <a href="http://shellharbour.hillross.com.au/" target="_blank"><img src="assets/img/sponsors/silver/hillross.png"></a>
+                <div class="sponsor-row">
+                    <a href="http://internetrix.com.au/" target="_blank"><img src="assets/img/sponsors/silver/internetrix.png"></a>
+                    <a href="http://typesafe.com/" target="_blank"><img src="assets/img/sponsors/silver/typesafe.png"></a>
+                    <a href="http://shellharbour.hillross.com.au/" target="_blank"><img src="assets/img/sponsors/silver/hillross.png"></a>
+                </div>
+                <div class="sponsor-row">
+                    <a href="http://internetrix.com.au/" target="_blank"><img src="assets/img/sponsors/silver/internetrix.png"></a>
+                    <a href="http://typesafe.com/" target="_blank"><img src="assets/img/sponsors/silver/typesafe.png"></a>
+                    <a href="http://shellharbour.hillross.com.au/" target="_blank"><img src="assets/img/sponsors/silver/hillross.png"></a>
+                </div>
             </div>
             <div class="sponsor-logos-bronze sponsor-logos">
-                <a href="https://www.spark.io/" target="_blank"><img src="assets/img/sponsors/bronze/spark.png"></a>  
-                <a href="http://www.uow.edu.au/its/index.html" target="_blank"><img src="assets/img/sponsors/bronze/uowits.png"></a>                
+                <div class="sponsor-row">
+                    <a href="https://www.spark.io/" target="_blank"><img src="assets/img/sponsors/bronze/spark.png"></a>  
+                    <a href="http://www.uow.edu.au/its/index.html" target="_blank"><img src="assets/img/sponsors/bronze/uowits.png"></a>
+                    <a href="https://www.spark.io/" target="_blank"><img src="assets/img/sponsors/bronze/spark.png"></a>  
+                    <a href="http://www.uow.edu.au/its/index.html" target="_blank"><img src="assets/img/sponsors/bronze/uowits.png"></a>                    
+                </div>   
+                <div class="sponsor-row">
+                    <a href="https://www.spark.io/" target="_blank"><img src="assets/img/sponsors/bronze/spark.png"></a>  
+                    <a href="http://www.uow.edu.au/its/index.html" target="_blank"><img src="assets/img/sponsors/bronze/uowits.png"></a>
+                    <a href="https://www.spark.io/" target="_blank"><img src="assets/img/sponsors/bronze/spark.png"></a>  
+                    <a href="http://www.uow.edu.au/its/index.html" target="_blank"><img src="assets/img/sponsors/bronze/uowits.png"></a>                    
+                </div>                              
             </div>                        
         </div>
     </section>    
@@ -152,11 +166,11 @@
         <div class="overlay blue-overlay"></div>
         <div class="inner">              
             <h2>Epic Venue</h2>
-            <p><a href="https://www.google.com.au/maps/dir//Bldg+11,+Keiraville+NSW+2500/@-34.4078354,150.8793675,241m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x6b131972307d09c7:0x63802244bf54f31d!2m2!1d150.8791967!2d-34.4075942" target="_blank"><i class="fa fa-map-marker"></i> uniCentre, University of Wollongong</a></p>
-            <iframe src="https://mapsengine.google.com/map/embed?mid=zv2CyJa6VdjI.kPQlLyXO-kiU&z=16" style="width:100%;height:400px;margin:20px 0;border:none"></iframe>
+            <p>uniCentre, University of Wollongong <i class="fa fa-map-marker"></i> <a href="https://www.google.com.au/maps/dir//Bldg+11,+Keiraville+NSW+2500/@-34.4078354,150.8793675,241m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x6b131972307d09c7:0x63802244bf54f31d!2m2!1d150.8791967!2d-34.4075942" target="_blank">Open map</a></p>
+            <iframe src="https://mapsengine.google.com/map/embed?mid=zv2CyJa6VdjI.kPQlLyXO-kiU&z=17" style="width:100%;height:500px;margin:30px 0;border:none"></iframe>
             <p class="venue-trihack">Closer to Canberra or Bega? We've joined forces with two other awesome hackathons on Nov 29-30! Checkout <a href="http://www.trihack.org.au" target="_blank">TriHack.org.au</a></p>
         </div>
-    </section>         
+    </section>           
       
     <section id="schedule" class="section">
         <div class="overlay pink-overlay"></div>
@@ -195,6 +209,7 @@
                     </ul>                
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
     </section>
     

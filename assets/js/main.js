@@ -72,43 +72,59 @@ $(function() {
         }
     }, 1000 / 30));
 
+    //prizes slider
     $('#prize-slider').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 1,
+      centerMode: true,
+      centerPadding: '60px',
+      autoplay: true,
+      slidesToShow: 1,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
     });
 
     //video
     var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
+    tag.src = "//www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     var player;
     function onYouTubeIframeAPIReady() {
-        player = new YT.Player('ytplayer', {
-            events: {
-                'onReady': onPlayerReady,
-                onStateChange: function(e){
-                    var id = 'bBjTM8UEYBE';
-                    if(e.data === YT.PlayerState.ENDED){
-                        player.loadVideoById(id);
-                    }
-                }
-            },
+        player = new YT.Player('ythack', {  
             playerVars: {
-                'controls': 0,           
+                'autoplay': 1, 
+                'controls': 0,     
+                'modestbranding': 1,      
                 'showinfo': 0,
                 'rel': 0,
-                'loop': 1,
-                'start': 18,
-                'end': 150
-            }
+                'enablejsapi': 1
+            },
+            events: {
+                'onReady': onPlayerReady
+              }        
         });
     }
-    function onPlayerReady() {
-        player.playVideo();
-        player.mute();
-    }
+    function onPlayerReady(event) {      
+        event.target.mute();            
+        event.target.loadPlaylist(['g3RUMSr5hUI, m5dEzLdbBSE']);    
+    } 
     function fixupYoutubeHeight() {
         var $player = $('#ytplayer');
         $player.css({
@@ -121,5 +137,3 @@ $(function() {
     $(window).on('resize', debounce(fixupYoutubeHeight, 250));
     fixupYoutubeHeight();
 });
-
-
