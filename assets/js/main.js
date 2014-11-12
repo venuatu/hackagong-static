@@ -1,3 +1,35 @@
+// https://github.com/jashkenas/underscore/blob/68100348881e55f8d7dc792982c8085a74331278/underscore.js#L773-L807
+function debounce(func, wait, immediate) {
+    var timeout, args, context, timestamp, result;
+
+    var later = function() {
+        var last = Date.now() - timestamp;
+
+        if (last < wait && last >= 0) {
+            timeout = setTimeout(later, wait - last);
+        } else {
+            timeout = null;
+            if (!immediate) {
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            }
+        }
+    };
+
+    return function() {
+        context = this;
+        args = arguments;
+        timestamp = Date.now();
+        var callNow = immediate && !timeout;
+        if (!timeout) timeout = setTimeout(later, wait);
+        if (callNow) {
+            result = func.apply(context, args);
+            context = args = null;
+        }
+
+        return result;
+    };
+};
 
 $(function() {
     //scrollto on click
@@ -15,7 +47,7 @@ $(function() {
         aArray.push(ahref);
     }
     var last = 0;
-    $(window).scroll(function(){
+    $(window).scroll(debounce(function(){
         var windowPos = $(window).scrollTop() + 51;
         var windowHeight = $(window).height();
         var docHeight = $(document).height();
@@ -38,18 +70,12 @@ $(function() {
                 $("nav li:last-child a").addClass("nav-active");
             }
         }
-    });
-    
-    //prizes slider
-    window.mySwipe = new Swipe(document.getElementById('prize-slider'), {
-        startSlide: 2,
-        speed: 400,
-        auto: 3000,
-        continuous: true,
-        disableScroll: false,
-        stopPropagation: false,
-        callback: function(index, elem) {},
-        transitionEnd: function(index, elem) {}
+    }, 1000 / 30));
+
+    $('#prize-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 1,
     });
 
     //video
@@ -92,7 +118,7 @@ $(function() {
             minHeight: 0,
         });
     }
-    $(window).on('resize', fixupYoutubeHeight);
+    $(window).on('resize', debounce(fixupYoutubeHeight, 250));
     fixupYoutubeHeight();
 });
 
