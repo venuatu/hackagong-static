@@ -1,3 +1,9 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
 body, html, #wrapper {
 	width: 100%;
 	height: 100%;
@@ -5,10 +11,19 @@ body, html, #wrapper {
 
 body {
 	font-family: "Adelle", serif;
-	background-color: #f2f2f2;
+	background-color: #f9f9f9;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
 }
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 
 h1, h2, h3 {
     font-family: "brandon-grotesque-n9", "brandon-grotesque", sans-serif;
@@ -41,12 +56,17 @@ p {
     color: #fff;
 }
 
-nav {
-    display: none;
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
 }
 
 .section {
 	width: 100%;
+	min-height: 500px;
 	position: relative;
 	overflow: hidden;
     color: #fff;
@@ -60,7 +80,7 @@ nav {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 5%;
+    padding: 5% 10%;
     height: 100%;
 }
 
@@ -78,13 +98,9 @@ nav {
 
 #intro {
 	background-color: #fff;
+	height: 100%;
     background-image: url('../img/bg.png');
     text-align: center;
-    padding-bottom: 0;
-}
-
-#intro .lower {
-    padding-bottom: 15px;
 }
 
 .background {
@@ -101,9 +117,7 @@ nav {
 .logo {
     width: 100%;
     max-width: 500px;
-    width: calc(100% - 16%);
     margin: 8%;
-    margin-bottom: 0;
 }
 
 p.intro-text {
@@ -120,18 +134,17 @@ p.intro-text {
 
 .tickets-btn {
     width: 40%;
-    margin: 36px;
-    margin-top: 12px;
+    margin: 64px;
     padding: 20px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     font-family: "brandon-grotesque-n9", "brandon-grotesque", sans-serif;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 24px;
     display: inline-block;
     border-radius: 5px;
-    width: 60%;
+    width: 40%;
     text-align: center;
     background: rgb(56,197,87);
 }
@@ -141,8 +154,11 @@ p.intro-text {
 }
 
 .sponsors-gold {
-    width: calc(100% - 16%);
-    max-width: 500px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
 }
     
 /* navigation */
@@ -194,21 +210,18 @@ nav li a:hover {
 
 #video {
     position: relative;
-/*
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
-*/
     overflow: hidden;
-    padding-bottom: 0;
-    margin-bottom: -5px;
 }
 
 #video iframe {
+    position: absolute;
+    top: 30px;
+    left: 0;
     width: 100%;
     height: 100%;
-    min-height: 500px;
-    height: calc(100% - 50px);
 }
 
 /* gradient overlays */
@@ -324,6 +337,12 @@ nav li a:hover {
     color: #fff;
 }
 
+/* video */
+
+#ytplayer {
+    background: #000;
+}
+
 /* about */
 
 #about {
@@ -332,15 +351,11 @@ nav li a:hover {
     background-position: center center;
 }
 
-#about .inner {
-    padding-top: 0;
-}
-
 p.about-text {
     font-size: 26px;
     line-height: 44px;
     color: #fff;
-    margin: 10px 0;
+    margin: 30px 0 40px 0;
 }
 
 p.about-text span {
@@ -349,7 +364,7 @@ p.about-text span {
 
 a.outline-btn {
     border: 2px solid rgba(255,255,255,0.8);
-    padding: 10px 15px;
+    padding: 10px 20px;
     margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
@@ -359,7 +374,7 @@ a.outline-btn {
     font-size: 20px;
     display: inline-block;
     border-radius: 5px;
-    min-width: 35%;
+    min-width: 45%;
 }
 
 a.outline-btn:hover {
@@ -375,6 +390,15 @@ a.outline-btn:hover {
     background-position: center center;    
 }
 
+.prize {
+    border: 1px solid #fff;
+    margin: 20px;
+}
+
+.prize h2 {
+    padding: 20px;
+}
+
 /* sponsors */
 
 #sponsors {
@@ -384,29 +408,36 @@ a.outline-btn:hover {
 }
 
 .sponsor-logos {
-    background: #fff;
-    padding: 20px 20px 20px 40px;
+    background: #f7f7f7;
+    display: table;
+    width: 100%;
     border-radius: 5px;
     margin-bottom: 20px;
-    text-align: center;
     position: relative;
+    border-spacing: 10px;
+    border-collapse: separate;
+    padding: 0 10px 10px 30px;
+}
+
+.sponsor-row {
+    display: table-row;
 }
 
 .sponsor-logos img {
-    padding: 0.2em;
+    max-width: 100%;
+}
+
+.sponsor-logos-gold a {
+    width: 50%;
+    padding: 4%;
+    background: #fff;
+    display: table-cell;
     vertical-align: middle;
+    border: 1px solid #fff;
 }
 
-.sponsor-logos.sponsor-logos-gold img {
-    max-width: 80%;
-}
-
-.sponsor-logos.sponsor-logos-silver img {
-    max-width: 40%;
-}
-
-.sponsor-logos.sponsor-logos-bronze img {
-    max-width: 25%;
+.sponsor-logos-gold a:hover {
+    border: 1px solid gold;
 }
 
 .sponsor-logos-gold::before {
@@ -421,11 +452,18 @@ a.outline-btn:hover {
     border-bottom-left-radius: 5px;
 }
 
-/*.sponsor-logos-gold img {
-    max-height: 70px;
+.sponsor-logos-silver a {
+    width: 33.3%;
+    padding: 4%;
+    background: #fff;
     display: table-cell;
-    width: auto;
-}*/
+    vertical-align: middle;
+    border: 1px solid #fff;
+}
+
+.sponsor-logos-silver a:hover {
+    border: 1px solid silver;
+}
 
 .sponsor-logos-silver::before {
     content: '';
@@ -439,12 +477,19 @@ a.outline-btn:hover {
     border-bottom-left-radius: 5px;
 }
 
-/*.sponsor-logos-silver img {
-    max-height: 50px;
+.sponsor-logos-bronze a {
+    width: 25%;
+    padding: 4%;
+    background: #fff;
     display: table-cell;
-    width: auto;    
+    vertical-align: middle;
+    border: 1px solid #fff;
 }
-*/
+
+.sponsor-logos-bronze a:hover {
+    border: 1px solid #8C7853;
+}
+
 .sponsor-logos-bronze::before {
     content: '';
     position: absolute;
@@ -457,12 +502,6 @@ a.outline-btn:hover {
     border-bottom-left-radius: 5px;
 }
 
-/*.sponsor-logos-bronze img {
-    max-height: 30px;
-    display: table-cell;
-    width: auto;    
-}
-*/
 /* venue */
 
 #venue {
@@ -482,27 +521,20 @@ a.outline-btn:hover {
 #schedule {
     background: url('../img/sleep.jpg');
     background-size: cover;
-    background-position: center center;
-    padding-bottom: 40px;
-}
-
-#schedule .days {
+    background-position: center center;   
 }
 
 .day {
+    width: 46%;
+    float: left;
     border: 1px solid #fff;
     border-radius: 5px;
-    padding: 0px 25px;
-    margin: 0.5em;
-    vertical-align: top;
+    padding: 20px 40px;
+    margin: 2%;
 }
 
 .day p {
     margin-bottom: 20px;
-}
-
-.day ul {
-    padding-left: 0;
 }
 
 .day li {
@@ -511,14 +543,19 @@ a.outline-btn:hover {
     font-size: 16px;
     text-align: left;
     margin: 10px 0;
-    margin-bottom: 15px;
+    padding-left: 85px;
+    position: relative;
 }
 
 .day li span {
     background: #fff;
-    display: block;
+    display: inline-block;
+    margin-right: 10px;
     color: #444;
     font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 75px;
     text-align: center;
 }
 
@@ -546,17 +583,8 @@ a.outline-btn:hover {
     background-position: center center;
 }
 
-#tickets .inner {
-    padding-bottom: 0;
-}
-
-#tickets h2 {
-    margin-bottom: 15px;
-}
-
 .entry-benefits {
-    display: inline-block;
-    margin: 0 20px 50px;
+    margin: 50px;
 }
 
 .entry-benefits li {
@@ -575,8 +603,7 @@ a.outline-btn:hover {
 }
 
 h2.entry-price {
-    text-align: center;
-    margin: 0;
+    float: right;
 }
 
 h2.entry-price span {
@@ -585,18 +612,20 @@ h2.entry-price span {
     line-height: 110px;
 }
 
+
 /* footer */
 
 #footer {
-    background: rgb(241,242,242);
+    background: #f9f9f9;
     height: 150px;
     padding: 20px;
 }
 
 #footer p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     text-align: center;
+    width: 45%;
     color: #444;
     margin: 20px auto;
 }
@@ -618,14 +647,11 @@ and (min-width : 960px) {
 		max-width: 1900px;
 		margin: 0 auto;
 		position: relative;
+        width: 100%;
 	}
 	
 	body {
 		float: left;
-		width: 100%;
-	}
-	
-	#wrapper {
 		width: 100%;
 	}
 	
@@ -654,16 +680,6 @@ and (min-width : 960px) {
         margin-top: 50px;
     }
 
-    #schedule .inner {
-        padding: 0;   
-    }
-
-    .day {
-        display: inline-block;
-        width: 30%;
-        padding: 15px 40px;
-    }
-
     #footer p {
         width: inherit;
     }
@@ -689,12 +705,6 @@ only screen and (min-width : 375px) and (max-width : 960px) {
 		line-height: 36px;
 	}
 	
-	.introContent {
-        width: 640px;
-        margin-left: -320px;
-        margin-top: -320px;
-	}
-	
 	.background {
 		width: 852px;
 		height: 1080px;
@@ -703,18 +713,8 @@ only screen and (min-width : 375px) and (max-width : 960px) {
 		background-size: 852px 1080px;
 	}
 
-    #schedule .inner {
-        padding: 0;   
-    }
-
-    .day {
-        display: inline-block;
-        width: 30%;
-        padding: 15px 40px;
-    }
-
     #footer p {
-        width: 70%;
+        width: 50%;
     }
 	
 }
