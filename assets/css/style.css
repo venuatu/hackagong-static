@@ -362,7 +362,7 @@ p.about-text span {
     padding: 0 5px;    
 }
 
-a.outline-btn {
+a.outline-btn, .item {
     border: 2px solid rgba(255,255,255,0.8);
     padding: 10px 20px;
     margin: 10px;
@@ -380,6 +380,15 @@ a.outline-btn {
 a.outline-btn:hover {
     border: 2px solid rgb(225,40,118);
     background: rgb(225,40,118);
+}
+
+.item {
+    width: 90%;
+}
+
+.item:hover {
+    border: 2px solid rgb(225,40,118);
+    background: rgb(56,197,87);
 }
 
 /* prizes */
@@ -630,7 +639,28 @@ h2.entry-price span {
     margin: 20px auto;
 }
 
+/* accordion */
 
+.accordion {
+}
+
+.accordion .item {
+    overflow: hidden;
+}
+
+.accordion .item .animate {
+    -moz-transition: 0.4s height ease-in-out;
+    -webkit-transition: 0.4s height ease-in-out;
+    transition: 0.4s height ease-in-out;
+}
+
+.accordion .item h3 {
+    font-size: 20px;
+}
+
+.accordion .item p {
+    font-size: 16px;
+}
 
 @media only screen 
 and (min-width : 960px) {

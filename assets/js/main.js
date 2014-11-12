@@ -136,4 +136,20 @@ $(function() {
     }
     $(window).on('resize', debounce(fixupYoutubeHeight, 250));
     fixupYoutubeHeight();
+
+    // accordion stuff
+    $('.accordion').each(function (i, e) {
+        var $e = $(e),
+            children = $e.find('.item');
+        children.each(function (j, item) {
+            $(item).find('.content').height(0).addClass('animate');
+        });
+        children.click(function () {
+            var $this = $(this),
+                desc = $this.find('.content')[0],
+                realHeight = desc.scrollHeight +'px';
+            desc.style.height = realHeight === desc.style.height ? '0px' : realHeight;
+        });
+    });
+
 });
