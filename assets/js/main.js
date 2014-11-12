@@ -106,7 +106,7 @@ $(function() {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     var player;
-    function onYouTubeIframeAPIReady() {
+    window.onYouTubeIframeAPIReady = function () {
         player = new YT.Player('ythack', {  
             playerVars: {
                 'autoplay': 1, 
@@ -124,13 +124,14 @@ $(function() {
     function onPlayerReady(event) {      
         event.target.mute();            
         event.target.loadPlaylist(['g3RUMSr5hUI, m5dEzLdbBSE']);    
-    } 
+    }
     function fixupYoutubeHeight() {
-        var $player = $('#ytplayer');
+        var $player = $('#ythack');
         $player.css({
             height: $player.width() * 9 / 16,
         });
-        $('#video, #ytplayer').css({
+        $player[0].height = $player.width() * 9 / 16;
+        $('#video, #ythack').css({
             minHeight: 0,
         });
     }
