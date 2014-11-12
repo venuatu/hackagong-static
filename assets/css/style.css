@@ -45,13 +45,13 @@ h2 {
 }
 
 h3 {
-	font-size: 16px;
+	font-size: 20px;
 	line-height: 24px;
 	font-weight: 800;
 }
 
 p {
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 26px;
     color: #fff;
 }
@@ -72,15 +72,15 @@ p {
     color: #fff;
 }
 
-.section h2 {
-    margin-bottom: 50px;
+.section h2.title {
+    margin: 0 0 40px 0;
 }
 
 .inner {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 5% 10%;
+    padding: 5%;
     height: 100%;
 }
 
@@ -103,17 +103,6 @@ p {
     text-align: center;
 }
 
-.background {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 568px;
-	height: 720px;
-	margin-left: -284px;
-	margin-top: -360px;
-	background-size: 568px 720px;
-}
-
 .logo {
     width: 100%;
     max-width: 500px;
@@ -125,6 +114,14 @@ p.intro-text {
     color: #151414;
     font-size: 24px;
     line-height: 42px;
+    margin: 0;
+}
+
+.social {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    bottom: 150px;
 }
 
 .social img {
@@ -168,7 +165,7 @@ nav {
     position: fixed;
     background: #fff;
     z-index: 99;
-    width: 50%;
+    width: 55%;
 }
 
 nav ul {
@@ -339,7 +336,7 @@ nav li a:hover {
 
 /* video */
 
-#ytplayer {
+#ythack {
     background: #000;
 }
 
@@ -400,12 +397,58 @@ a.outline-btn:hover {
 }
 
 .prize {
-    border: 1px solid #fff;
-    margin: 20px;
+    margin: 10px;
+    background: #fff;
 }
 
-.prize h2 {
+.prize h3 {
     padding: 20px;
+    margin-top: 10px;
+}
+
+.prize-inner {
+    padding: 15px;   
+}
+
+.prize p {
+    color: #444;
+}
+
+.prize-sponsor {
+    background: #f7f7f7;
+    display: table;
+    width: 100%;
+    position: relative;
+    border-spacing: 10px;
+    border-collapse: separate;
+    padding: 10px;
+}
+
+.prize-sponsor-row {
+    display: table-row;
+}
+
+.prize-sponsor img {
+    max-width: 30%;
+    margin: 0 auto;
+}
+    
+.prize-sponsor a {
+    width: 25%;
+    padding: 2%;
+    background: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid #fff;
+}
+
+#prize-overall .prize-sponsor img  {
+    padding: 4%;
+    max-width: 100%;
+}
+
+#prize-overall .prize-sponsor a  {
+    max-width: 100%;
 }
 
 /* sponsors */
@@ -534,16 +577,25 @@ a.outline-btn:hover {
 }
 
 .day {
-    width: 46%;
+    width: 49%;
     float: left;
     border: 1px solid #fff;
     border-radius: 5px;
-    padding: 20px 40px;
-    margin: 2%;
+    padding: 10px 20px;
+    margin-right: 2%;
+}
+
+.day:last-child {
+    margin-right: 0;
 }
 
 .day p {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.day ul {
+    margin: 0;
+    padding: 0;
 }
 
 .day li {
@@ -593,13 +645,13 @@ a.outline-btn:hover {
 }
 
 .entry-benefits {
-    margin: 50px;
+    margin: 30px 0;
 }
 
 .entry-benefits li {
     list-style: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
 }
 
@@ -613,6 +665,7 @@ a.outline-btn:hover {
 
 h2.entry-price {
     float: right;
+    margin: 0;
 }
 
 h2.entry-price span {
@@ -686,7 +739,7 @@ and (min-width : 960px) {
 	}
 	
 	#intro {
-		width: 50%;
+		width: 45%;
 		max-width: 950px;
 		position: fixed;
 		height: 100%;
@@ -700,8 +753,8 @@ and (min-width : 960px) {
     }
 	
 	#content {
-		width: 50%;
-		margin-left: 50%;
+		width: 55%;
+		margin-left: 45%;
 		z-index: 1;
 		position: relative;
 	}

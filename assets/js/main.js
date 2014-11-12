@@ -34,7 +34,7 @@ function debounce(func, wait, immediate) {
 $(function() {
     //scrollto on click
     $('nav a, .tickets-btn').on('click',function(){
-        $('body').scrollTo($(this).attr('href'),{duration:'slow', offset : -50});
+        $('body').scrollTo($(this).attr('href'),{duration:'slow', offset : -48});
         return false;
     });
     
@@ -75,7 +75,7 @@ $(function() {
     //prizes slider
     $('#prize-slider').slick({
       centerMode: true,
-      centerPadding: '60px',
+      centerPadding: '50px',
       autoplay: true,
       slidesToShow: 1,
       responsive: [
