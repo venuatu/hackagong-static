@@ -76,7 +76,7 @@ $(function() {
     $('#prize-slider').slick({
       centerMode: true,
       centerPadding: '50px',
-      autoplay: true,
+      autoplay: false,
       slidesToShow: 1,
       responsive: [
         {
