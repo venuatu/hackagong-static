@@ -141,15 +141,16 @@ $(function() {
     // accordion stuff
     $('.accordion').each(function (i, e) {
         var $e = $(e),
-            children = $e.find('.item');
+            children = $e.find('.faq-wrap');
         children.each(function (j, item) {
-            $(item).find('.content').height(0).addClass('animate');
+            $(item).find('.faq-content').height(0).addClass('animate');
         });
         children.click(function () {
             var $this = $(this),
-                desc = $this.find('.content')[0],
+                desc = $this.find('.faq-content')[0],
                 realHeight = desc.scrollHeight +'px';
             desc.style.height = realHeight === desc.style.height ? '0px' : realHeight;
+            $(this).find('.faq-heading').toggleClass('active');
         });
     });
 

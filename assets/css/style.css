@@ -351,7 +351,7 @@ p.about-text span {
     padding: 0 5px;    
 }
 
-a.outline-btn, .item {
+a.outline-btn {
     border: 2px solid rgba(255,255,255,0.8);
     padding: 10px 20px;
     margin: 10px;
@@ -369,15 +369,6 @@ a.outline-btn, .item {
 a.outline-btn:hover {
     border: 2px solid rgb(225,40,118);
     background: rgb(225,40,118);
-}
-
-.item {
-    width: 90%;
-}
-
-.item:hover {
-    border: 2px solid rgb(225,40,118);
-    background: rgb(56,197,87);
 }
 
 /* prizes */
@@ -679,6 +670,65 @@ p.unicentre {
     background-position: center center;  
 }
 
+.accordion .faq-wrap {
+    overflow: hidden;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.accordion .faq-wrap .animate {
+    -moz-transition: 0.4s height ease-in-out;
+    -webkit-transition: 0.4s height ease-in-out;
+    transition: 0.4s height ease-in-out;
+}
+
+.accordion .faq-heading {
+    font-size: 17px;
+    font-weight: normal;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    padding-left: 40px;
+    position: relative;
+}
+
+.accordion .faq-heading:hover, .accordion .faq-heading.active {
+    background: #fff;
+    color: #444;
+}
+
+.accordion .faq-heading:before {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -10px;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+}
+
+.accordion .faq-heading.active:before {
+    content: "\f077";   
+}
+
+.accordion .faq-content p {
+    font-size: 15px;
+    background: #fff;
+    color: #444;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+}
+
+.accordion .faq-content p  a {
+    color: #5C65FF;
+}
+
 /* tickets */
 
 #tickets {
@@ -735,28 +785,6 @@ h2.entry-price span {
     margin: 20px auto;
 }
 
-/* accordion */
-
-.accordion {
-}
-
-.accordion .item {
-    overflow: hidden;
-}
-
-.accordion .item .animate {
-    -moz-transition: 0.4s height ease-in-out;
-    -webkit-transition: 0.4s height ease-in-out;
-    transition: 0.4s height ease-in-out;
-}
-
-.accordion .item h3 {
-    font-size: 20px;
-}
-
-.accordion .item p {
-    font-size: 16px;
-}
 
 @media only screen 
 and (min-width : 960px) {
