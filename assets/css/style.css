@@ -383,6 +383,7 @@ a.outline-btn:hover {
     margin: 10px;
     background: #fff;
     border-radius: 5px;
+    opacity: 0.6;
 }
 
 .prize a {
@@ -449,6 +450,34 @@ p.prize-items {
     display: table-cell;
     vertical-align: middle;
     border: 1px solid #fff;
+}
+
+/* prize slider */
+
+.slick-prev {
+    left: -5%;
+}
+
+.slick-next {
+    right: -5%;
+}
+
+.slick-prev, .slick-next {
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 60px;
+    text-shadow: 0px 1px 2px #000;
+}
+
+.slick-active {
+    -moz-transition: 0.8s opacity ease-in-out;
+    -webkit-transition: 0.8s opacity ease-in-out;
+    transition: 0.8s opacity ease-in-out;
+    opacity: 1;
 }
 
 /* prize overall */
@@ -660,6 +689,11 @@ p.unicentre {
     background: url('../img/launch.jpg');
     background-size: cover;
     background-position: center center;   
+}
+
+#blog .blog-img {
+    width: 100%;
+    height: auto;
 }
 
 /* faq */
