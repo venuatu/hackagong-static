@@ -96,10 +96,13 @@ p {
     text-align: center;
 }
 
+#intro .inner {
+    padding: 0;
+}
+
 .logo {
     max-width: 84%;
-    margin: 8%;
-    margin-bottom: 4%;
+    margin: 4% auto;
 }
 
 p.intro-text {
@@ -837,10 +840,11 @@ and (min-width : 960px) {
         height: 100%;
 	}
 
-    #intro .lower {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+    #intro .inner {
+        position: relative;
+        top: 50%;
+        top: calc(50% - 43px);
+        transform: translateY(-50%);
     }
 	
 	#content {
@@ -876,11 +880,7 @@ and (min-width : 960px) {
 
     .tickets-btn {
         width: 40%;
-        margin: 64px auto;
-
-        position: absolute;
-        bottom: 15px;
-        left: 30%;
+        margin: 16px auto 0;
     }
 
     .social {
