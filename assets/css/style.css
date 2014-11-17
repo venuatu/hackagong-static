@@ -414,7 +414,6 @@ p.prize-items {
     position: relative;
     border-spacing: 10px;
     border-collapse: separate;
-    padding: 10px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -469,12 +468,12 @@ p.prize-items {
     max-width: 100%;
 }
 
-#prize-overall .prize-sponsor-row:last-child img  {
+#prize-overall .prize-sponsor-row img  {
     max-height: 60px;
 }
 
 #prize-overall .prize-sponsor-row:last-child a  {
-    width: 25%;
+    width: 33.3%;
 }
 
 #prize-overall .prize-sponsor a  {
@@ -516,6 +515,31 @@ p.prize-items {
 
 .sponsor-logos img {
     max-width: 100%;
+}
+
+.sponsor-logos-platinum a {
+    width: 100%;
+    padding: 4%;
+    background: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid #fff;
+}
+
+.sponsor-logos-platinum a:hover {
+    border: 1px solid #000;
+}
+
+.sponsor-logos-platinum::before {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 20px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .sponsor-logos-gold a {
