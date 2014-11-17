@@ -1,6 +1,4 @@
 * {
-	margin: 0;
-	padding: 0;
     box-sizing: border-box;
 }
 
@@ -76,11 +74,8 @@ p {
 }
 
 .inner {
-    position: relative;
-    z-index: 2;
     text-align: center;
     padding: 5%;
-    height: 100%;
 }
 
 .clear {
@@ -97,15 +92,14 @@ p {
 
 #intro {
 	background-color: #fff;
-	height: 100%;
     background-image: url('../img/bg.png');
     text-align: center;
 }
 
 .logo {
-    width: 100%;
-    max-width: 500px;
+    max-width: 84%;
     margin: 8%;
+    margin-bottom: 4%;
 }
 
 p.intro-text {
@@ -113,14 +107,12 @@ p.intro-text {
     color: #151414;
     font-size: 24px;
     line-height: 42px;
-    margin: 0;
+    margin: 0 16px;
 }
 
 .social {
-    position: absolute;
     margin: 0 auto;
     width: 100%;
-    bottom: 150px;
 }
 
 .social img {
@@ -129,20 +121,19 @@ p.intro-text {
 }
 
 .tickets-btn {
-    width: 40%;
-    margin: 64px;
-    padding: 20px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #fff;
     font-family: "brandon-grotesque-n9", "brandon-grotesque", sans-serif;
     font-weight: 900;
     font-size: 24px;
-    display: inline-block;
     border-radius: 5px;
-    width: 40%;
     text-align: center;
     background: rgb(56,197,87);
+    color: #fff;
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
 }
 
 .tickets-btn:hover {
@@ -150,21 +141,21 @@ p.intro-text {
 }
 
 .sponsors-gold {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 500px;
-    margin-left: -250px;
+    max-width: 95%;
 }
     
 /* navigation */
 
 nav {
+    position: fixed;
+    bottom: 0;
     height: 50px;
+    width: 100%;
     position: fixed;
     background: #fff;
     z-index: 99;
-    width: 55%;
+    overflow: hidden;
+    overflow-x: auto;
 }
 
 nav ul {
@@ -194,6 +185,7 @@ nav li a {
     text-align: center;
     font-size: 14px;
     border-left: 1px solid #eee;
+    padding: 0 0.2em;
 }
 
 nav li a:hover {
@@ -215,16 +207,11 @@ nav li a:hover {
 
 /* gradient overlays */
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.overlay .inner {
     opacity: 0.95;
 }
 
-.green-overlay {
+.green-overlay .inner, .green-text {
     background: rgb(56,197,87); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(56,197,87,1) 0%, rgba(19,208,221,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(56,197,87,1)), color-stop(100%,rgba(19,208,221,1))); /* Chrome,Safari4+ */
@@ -241,7 +228,7 @@ nav li a:hover {
     color: #fff;
 }
     
-.purple-overlay {
+.purple-overlay .inner, .purple-text {
     background: rgb(225,40,118); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(225,40,118,1) 0%, rgba(160,41,234,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(225,40,118,1)), color-stop(100%,rgba(160,41,234,1))); /* Chrome,Safari4+ */
@@ -258,7 +245,7 @@ nav li a:hover {
     color: #fff;
 }
 
-.orange-overlay {
+.orange-overlay .inner, .orange-text {
     background: rgb(250,66,64); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(250,66,64,1) 0%, rgba(238,167,62,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,66,64,1)), color-stop(100%,rgba(238,167,62,1))); /* Chrome,Safari4+ */
@@ -275,7 +262,7 @@ nav li a:hover {
     color: #fff;
 }
 
-.yellow-overlay {
+.yellow-overlay .inner, .yellow-text {
     background: rgb(237,127,48); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(237,127,48,1) 0%, rgba(237,225,1,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(237,127,48,1)), color-stop(100%,rgba(237,225,1,1))); /* Chrome,Safari4+ */
@@ -292,7 +279,7 @@ nav li a:hover {
     color: #fff;
 }
 
-.blue-overlay {
+.blue-overlay .inner, .blue-text {
     background: rgb(174,79,181); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(174,79,181,1) 0%, rgba(118,160,213,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,79,181,1)), color-stop(100%,rgba(118,160,213,1))); /* Chrome,Safari4+ */
@@ -309,7 +296,7 @@ nav li a:hover {
     color: #fff;
 }
 
-.pink-overlay {
+.pink-overlay .inner, .pink-text {
     background: rgb(255,51,91); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(255,51,91,1) 0%, rgba(255,95,167,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,51,91,1)), color-stop(100%,rgba(255,95,167,1))); /* Chrome,Safari4+ */
@@ -335,16 +322,15 @@ nav li a:hover {
 /* about */
 
 #about {
-    background: url('../img/design.jpg');
     background-size: cover;
     background-position: center center;
 }
 
 p.about-text {
-    font-size: 26px;
-    line-height: 44px;
+    font-size: 20px;
+    line-height: 36px;
     color: #fff;
-    margin: 30px 0 40px 0;
+    margin: 0;
 }
 
 p.about-text span {
@@ -353,8 +339,6 @@ p.about-text span {
 
 a.outline-btn {
     border: 2px solid rgba(255,255,255,0.8);
-    padding: 10px 20px;
-    margin: 10px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
@@ -363,7 +347,9 @@ a.outline-btn {
     font-size: 20px;
     display: inline-block;
     border-radius: 5px;
-    min-width: 45%;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 90%;
 }
 
 a.outline-btn:hover {
@@ -374,16 +360,19 @@ a.outline-btn:hover {
 /* prizes */
 
 #prizes {
-    background: url('../img/code.jpg');
     background-size: cover;
     background-position: center center;    
+}
+
+#prizes .inner {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .prize {
     margin: 10px;
     background: #fff;
     border-radius: 5px;
-    opacity: 0.6;
 }
 
 .prize a {
@@ -392,14 +381,8 @@ a.outline-btn:hover {
 
 .prize h3 {
     padding: 20px;
-    margin: 10px 0;
+    margin: 0;
     font-size: 26px;
-}
-
-.prize-inner {
-    padding: 20px 0;
-    width: 85%;
-    margin: 0 auto;
 }
 
 p.prize-items {
@@ -474,10 +457,6 @@ p.prize-items {
 }
 
 .slick-active {
-    -moz-transition: 0.8s opacity ease-in-out;
-    -webkit-transition: 0.8s opacity ease-in-out;
-    transition: 0.8s opacity ease-in-out;
-    opacity: 1;
 }
 
 /* prize overall */
@@ -512,7 +491,6 @@ p.prize-items {
 /* sponsors */
 
 #sponsors {
-    background: url('../img/build.jpg');
     background-size: cover;
     background-position: center center;   
 }
@@ -615,7 +593,6 @@ p.prize-items {
 /* venue */
 
 #venue {
-    background: url('../img/game.jpg');
     background-size: cover;
     background-position: center center;   
 }
@@ -634,18 +611,15 @@ p.unicentre {
 /* schedule */
 
 #schedule {
-    background: url('../img/sleep.jpg');
     background-size: cover;
     background-position: center center;   
 }
 
 .day {
-    width: 49%;
-    float: left;
     border: 1px solid #fff;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-right: 2%;
+    margin-bottom: 10px;
 }
 
 .day:last-child {
@@ -662,31 +636,35 @@ p.unicentre {
 }
 
 .day li {
+/*    padding-left: 85px;
+    position: relative;
+*/
     list-style: none;
     color: #fff;
     font-size: 16px;
     text-align: left;
     margin: 10px 0;
-    padding-left: 85px;
-    position: relative;
 }
 
 .day li span {
-    background: #fff;
     display: inline-block;
+    left: 0;
+    width: 75px;
+
+    display: block;
+    width: 100%;
+    left: auto;
+
+    background: #fff;
     margin-right: 10px;
     color: #444;
     font-weight: bold;
-    position: absolute;
-    left: 0;
-    width: 75px;
     text-align: center;
 }
 
 /* blog */
 
 #blog {
-    background: url('../img/launch.jpg');
     background-size: cover;
     background-position: center center;   
 }
@@ -699,19 +677,26 @@ p.unicentre {
 /* faq */
 
 #faq {
-    background: url('../img/code.jpg');
     background-size: cover;
     background-position: center center;  
+*/}
+
+#faq .inner {
+    padding: 5% 0;
 }
 
-.accordion .faq-wrap {
+.accordion .accordion-item {
     overflow: hidden;
     text-align: left;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
 }
 
-.accordion .faq-wrap .animate {
+.accordion-item:hover {
+    will-change: height;
+}
+
+.accordion .accordion-content.animate {
     -moz-transition: 0.4s height ease-in-out;
     -webkit-transition: 0.4s height ease-in-out;
     transition: 0.4s height ease-in-out;
@@ -766,7 +751,6 @@ p.unicentre {
 /* tickets */
 
 #tickets {
-    background: url('../img/design.jpg');
     background-size: cover;
     background-position: center center;
 }
@@ -806,15 +790,15 @@ h2.entry-price span {
 
 #footer {
     background: #f9f9f9;
-    height: 150px;
-    padding: 20px;
+    padding: 10px;
+    padding-bottom: 40px;
 }
 
 #footer p {
     font-size: 14px;
     line-height: 22px;
     text-align: center;
-    width: 45%;
+    width: 90%;
     color: #444;
     margin: 20px auto;
 }
@@ -828,7 +812,8 @@ and (min-width : 960px) {
 	}
 
     nav {
-        display: block;
+        bottom: auto;
+        width: 55%;
     }
 	
 	#wrapper {
@@ -849,6 +834,7 @@ and (min-width : 960px) {
 		position: fixed;
 		height: 100%;
 		float: none;
+        height: 100%;
 	}
 
     #intro .lower {
@@ -868,8 +854,102 @@ and (min-width : 960px) {
         margin-top: 50px;
     }
 
+    #schedule .day {
+        width: 49%;
+        float: left;
+        margin-right: 1%;
+    }
+
+    #footer {
+        height: 150px;
+        padding: 20px;
+    }
+
     #footer p {
-        width: inherit;
+        width: 80%;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .tickets-btn {
+        width: 40%;
+        margin: 64px auto;
+
+        position: absolute;
+        bottom: 15px;
+        left: 30%;
+    }
+
+    .social {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    #about .inner {
+        padding-top: 0.5em;
+    }
+
+    a.outline-btn, .item {
+        width: auto;
+        min-width: 45%;
+    }
+
+    p.about-text {
+        font-size: 26px;
+        line-height: 44px;
+    }
+
+    .prize h3 {
+        margin: 0;
+    }
+
+    .prize-inner {
+        padding: 20px 0;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    #faq .inner {
+        padding: 5%;
+    }
+
+    .accordion .accordion-item {
+        width: 80%;
+    }
+
+    #about {
+        background: url('../img/design.jpg');
+    }
+
+    #prizes {
+        background: url('../img/code.jpg');
+    }
+
+    #sponsors {
+        background: url('../img/build.jpg');
+    }
+
+    #venue {
+        background: url('../img/game.jpg');
+    }
+
+    #schedule {
+        background: url('../img/sleep.jpg');
+    }
+
+    #blog {
+        background: url('../img/launch.jpg');
+    }
+
+    #faq {
+        background: url('../img/code.jpg');
+    }
+  
+    #tickets {
+        background: url('../img/design.jpg');
     }
 }
 
@@ -900,9 +980,4 @@ only screen and (min-width : 375px) and (max-width : 960px) {
 		margin-top: -540px;
 		background-size: 852px 1080px;
 	}
-
-    #footer p {
-        width: 50%;
-    }
-	
 }
