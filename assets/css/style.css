@@ -9,7 +9,7 @@ body, html, #wrapper {
 
 body {
 	font-family: "Adelle", serif;
-	background-color: #f9f9f9;
+	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: none;
 }
@@ -96,6 +96,7 @@ p {
     text-align: center;
     position: relative;
     z-index: 99;
+    top: 0;
 }
 
 #intro .inner {
@@ -112,7 +113,7 @@ p.intro-text {
     color: #151414;
     font-size: 16px;
     line-height: 22px;
-    margin: 10% 0;
+    margin: 5% 0;
 }
 
 .social {
@@ -123,6 +124,16 @@ p.intro-text {
 .social img {
     height: 38px;
     display: inline-block;
+}
+
+.social img:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1);
+}
+
+.newsletter {
+    margin: 10px;
 }
 
 .tickets-btn {
@@ -204,7 +215,6 @@ nav li a:hover {
 #video {
     overflow: hidden;
     margin-bottom: -5px;
-    display: none;
 }
 
 #video iframe {
@@ -333,8 +343,8 @@ nav li a:hover {
 }
 
 p.about-text {
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 30px;    
     color: #fff;
 }
 
@@ -407,7 +417,7 @@ p.prize-items {
 
 .prize p.prize-details {
     color: #444;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 22px;
     text-align: left;
     padding: 0 20px;
@@ -705,14 +715,29 @@ p.unicentre {
     color: #444;
     border-radius: 5px;
     padding-bottom: 10px;
+    position: relative;
 }
 
 #blog h4.blog-heading {
     text-align: left;
-    padding: 15px;
+    padding: 20px 15px;
     background: #fff;
     margin: 0;
     border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#blog .blog-item a.permalink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#blog .blog-item a {
+    color: #5C65FF;
 }
 
 #blog .blog-item p {
@@ -849,6 +874,10 @@ h2.entry-price span {
     padding-bottom: 40px;
 }
 
+#footer a {
+    color: #5C65FF;
+}
+
 #footer p {
     font-size: 14px;
     line-height: 22px;
@@ -857,6 +886,64 @@ h2.entry-price span {
     color: #444;
     margin: 20px auto;
 }
+
+/* wordpress single */
+
+
+body.single {
+    background: rgb(174,79,181); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(174,79,181,1) 0%, rgba(118,160,213,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,79,181,1)), color-stop(100%,rgba(118,160,213,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(174,79,181,1) 0%,rgba(118,160,213,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(174,79,181,1) 0%,rgba(118,160,213,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(174,79,181,1) 0%,rgba(118,160,213,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(174,79,181,1) 0%,rgba(118,160,213,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ae4fb5', endColorstr='#76a0d5',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+}
+
+article {
+    background: #fff;
+    padding: 5%;
+    margin: 5%;
+    border-radius: 5px;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+article p, article li {
+    color: #444;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+article a {
+    color: #5C65FF;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-feature-img {
+    width: 100%;
+    height: auto;
+}
+
+section.entry-content {
+    margin-top: 40px;
+}
+
+time {
+    background: #444;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+
+/* media queries */
 
 
 @media only screen 
@@ -1044,9 +1131,6 @@ and (min-width : 960px) {
         max-width: 100%;
     }    
     
-    #video {
-        display: block;
-    }
     .prize-sponsor a {
         padding: 2%;
     }
@@ -1116,5 +1200,10 @@ only screen and (min-width : 375px) and (max-width : 960px) {
     h2.entry-price {
         float: right;
     }
+    
+    p.intro-text {
+        font-size: 20px;
+        line-height: 32px;
+    }    
     
 }
