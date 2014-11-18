@@ -952,10 +952,10 @@ and (min-width : 960px) {
         background: url('../img/design.jpg');
     }
 
-    #prizes {
+/*    #prizes {
         background: url('../img/code.jpg');
     }
-
+*/
     #sponsors {
         background: url('../img/build.jpg');
     }
