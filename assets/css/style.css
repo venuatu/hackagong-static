@@ -70,7 +70,7 @@ p {
 }
 
 .section h2.title {
-    margin: 0 0 40px 0;
+    margin: 20px 0 30px 0;
 }
 
 .inner {
@@ -94,6 +94,8 @@ p {
 	background-color: #fff;
     background-image: url('../img/bg.png');
     text-align: center;
+    position: relative;
+    z-index: 99;
 }
 
 #intro .inner {
@@ -101,20 +103,20 @@ p {
 }
 
 .logo {
-    max-width: 84%;
-    margin: 4% auto;
+    max-width: 90%;
+    margin: 4% 0;
 }
 
 p.intro-text {
     font-weight: 500;
     color: #151414;
-    font-size: 24px;
-    line-height: 42px;
-    margin: 0 16px;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10% 0;
 }
 
 .social {
-    margin: 0 auto;
+    margin: 10% 0;
     width: 100%;
 }
 
@@ -133,9 +135,8 @@ p.intro-text {
     text-align: center;
     background: rgb(56,197,87);
     color: #fff;
-
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 40px;
     margin: 10px 0;
 }
 
@@ -143,8 +144,8 @@ p.intro-text {
     background: rgb(225,40,118);
 }
 
-.sponsors-gold {
-    max-width: 95%;
+.major-sponsors {
+    max-width: 90%;
 }
     
 /* navigation */
@@ -159,6 +160,7 @@ nav {
     z-index: 99;
     overflow: hidden;
     overflow-x: auto;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 
 nav ul {
@@ -202,6 +204,7 @@ nav li a:hover {
 #video {
     overflow: hidden;
     margin-bottom: -5px;
+    display: none;
 }
 
 #video iframe {
@@ -427,14 +430,14 @@ p.prize-items {
 }
 
 .prize-sponsor img {
-    max-width: 30%;
+    max-width: 90%;
     max-height: 70px;
     margin: 0 auto;
 }
     
 .prize-sponsor a {
     width: 33.3%;
-    padding: 2%;
+    padding: 5%;
     background: #fff;
     display: table-cell;
     vertical-align: middle;
@@ -479,42 +482,10 @@ p.prize-items {
     width: 33.3%;
 }
 
-#prize-overall .prize-sponsor a  {
-    max-width: 100%;
-}
-
-/* prize people choice */
-
-#prize-scala .prize-sponsor img {
-    max-width: 60%;
-}
-
-/* prize 3D */
-
-#prize-3di .prize-sponsor img, #prize-3dc .prize-sponsor img  {
-    max-width: 80%;
-}
-
 /* prize scala */
-
-#prize-people-choice .prize-sponsor img  {
-    max-width: 60%;
-}
 
 #prize-scala .prize-sponsor a {
     width: 25%;
-}
-
-/* prize game */
-
-#prize-game .prize-sponsor img {
-    max-width: 60%;
-}
-
-/* prize app */
-
-#prize-app .prize-sponsor img {
-    max-width: 60%;
 }
 
 /* sponsors */
@@ -928,6 +899,7 @@ and (min-width : 960px) {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        padding: 4%;
     }
 	
 	#content {
@@ -942,7 +914,7 @@ and (min-width : 960px) {
     }
 
     #schedule .day {
-        width: 48%;
+        width: 49%;
         float: left;
         margin-right: 2%;
     }
@@ -962,7 +934,6 @@ and (min-width : 960px) {
     }
 
     .tickets-btn {
-        width: 40%;
         margin: 16px auto 0;
     }
 
@@ -1054,6 +1025,62 @@ and (min-width : 960px) {
     p.prize-items {
         font-size: 28px;
         line-height: 32px; 
+    }
+    
+    p.intro-text {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .social {
+        margin: 0 auto;
+    }
+    
+    .section h2.title {
+        margin: 0 0 40px 0;
+    }
+    
+    .major-sponsors {
+        max-width: 100%;
+    }    
+    
+    #video {
+        display: block;
+    }
+    .prize-sponsor a {
+        padding: 2%;
+    }
+    .prize-sponsor img {
+        max-width: 30%;
+    }
+    #prize-overall .prize-sponsor a  {
+        max-width: 100%;
+    }
+    
+    #prize-people-choice .prize-sponsor img {
+        max-width: 60%;
+    }    
+
+    #prize-scala .prize-sponsor img {
+        max-width: 60%;
+    }
+
+    #prize-3di .prize-sponsor img, #prize-3dc .prize-sponsor img  {
+        max-width: 80%;
+    }
+
+
+    #prize-iot img  {
+        max-width: 60%;
+    }
+
+    #prize-game .prize-sponsor img {
+        max-width: 60%;
+    }
+
+
+    #prize-app .prize-sponsor img {
+        max-width: 60%;
     }
     
 }
