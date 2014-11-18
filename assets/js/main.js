@@ -87,17 +87,9 @@ $(function() {
       centerMode: true,
       centerPadding: '50px',
       autoplay: false,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       responsive: [
-        // {
-        //   breakpoint: 768,
-        //   settings: {
-        //     arrows: true,
-        //     centerMode: true,
-        //     centerPadding: '40px',
-        //     slidesToShow: 3
-        //   }
-        // },
         {
           breakpoint: 480,
           settings: {
@@ -109,6 +101,25 @@ $(function() {
         }
       ]
     });
+    
+    
+    //blog slider
+    $('#blog-slider').slick({
+      infinite: false,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+				    
 
     //video
     setTimeout(function () {
